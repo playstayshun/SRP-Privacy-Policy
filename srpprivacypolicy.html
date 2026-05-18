@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f0a0a" />
+  <title>Privacy Policy — Route Planner</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --red:      #e8293a;
+      --red-dim:  #b01e2b;
+      --red-soft: rgba(232,41,58,.10);
+      --bg:       #0f0a0a;
+      --surface:  #170d0d;
+      --raised:   #201212;
+      --border:   rgba(255,255,255,.07);
+      --border-r: rgba(232,41,58,.2);
+      --text:     #f5f0f0;
+      --muted:    #8a6e6e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: var(--bg); }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      padding: 0 0 64px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-r);
+      padding: 36px 24px 28px;
+      text-align: center;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px; height: 52px;
+      background: var(--red);
+      border-radius: 14px;
+      margin-bottom: 14px;
+    }
+
+    header h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(26px, 5vw, 34px);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    header h1 span { color: var(--red); }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .02em;
+    }
+
+    /* ── Content ── */
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+    }
+
+    .effective-badge {
+      display: inline-block;
+      background: var(--red-soft);
+      border: 1px solid var(--border-r);
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-bottom: 32px;
+    }
+
+    /* ── Section cards ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    section:hover {
+      border-color: var(--border-r);
+      transition: border-color .2s;
+    }
+
+    .section-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #c4adad;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 10px 0 12px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #c4adad;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      margin-top: 8px;
+    }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    /* ── Third-party chips ── */
+    .third-party {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .tp-card {
+      background: var(--raised);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .tp-card .tp-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .tp-card p { font-size: 13.5px; margin: 0; }
+
+    .tp-card a {
+      color: var(--red);
+      text-decoration: none;
+      font-size: 12px;
+      display: inline-block;
+      margin-top: 6px;
+      opacity: .85;
+    }
+
+    .tp-card a:hover { opacity: 1; text-decoration: underline; }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--raised);
+      border: 1px solid var(--border-r);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 6px;
+    }
+
+    .contact-block p { margin: 0; font-size: 14px; }
+
+    .contact-block a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding: 0 24px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .02em;
+    }
+
+    footer span { color: var(--red); }
+
+    @media (max-width: 480px) {
+      section { padding: 22px 18px 20px; }
+      header  { padding: 28px 20px 24px; }
+      main    { padding: 28px 16px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark">
+      <!-- Route / pin icon -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+           stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    </div>
+    <h1>Route <span>Planner</span></h1>
+    <p class="subtitle">Privacy Policy</p>
+  </header>
+
+  <main>
+
+    <div class="effective-badge">Effective Date: May 18, 2025</div>
+
+    <!-- 1. Overview -->
+    <section>
+      <p class="section-number">01</p>
+      <h2>Overview</h2>
+      <p>
+        Route Planner ("the App") is a mobile application that helps you plan and
+        optimise multi-stop routes on your device. This Privacy Policy explains what
+        information the App accesses, how it is used, and your rights regarding that
+        information.
+      </p>
+      <p>
+        By using the App you agree to the practices described in this policy. If you
+        do not agree, please discontinue use of the App.
+      </p>
+    </section>
+
+    <!-- 2. Information We Collect -->
+    <section>
+      <p class="section-number">02</p>
+      <h2>Information We Collect</h2>
+      <p>The App requests access to the following on your device:</p>
+      <ul>
+        <li>
+          <span><strong>Precise Location (GPS)</strong> — used only when you choose
+          to add your current location as a stop. Location data is never stored on
+          any server or transmitted beyond the third-party routing services listed
+          below.</span>
+        </li>
+        <li>
+          <span><strong>Addresses you enter</strong> — stop addresses typed by you
+          are sent to OpenStreetMap's Nominatim service for geocoding (converting
+          an address to coordinates). They are not stored by us.</span>
+        </li>
+        <li>
+          <span><strong>Route coordinates</strong> — stop coordinates are sent to
+          the OSRM routing engine to calculate an optimised route order. They are
+          not stored by us.</span>
+        </li>
+      </ul>
+      <p>
+        <strong>We do not collect, store, or transmit</strong> any personally
+        identifiable information (PII) such as your name, email address, phone
+        number, payment details, or device identifiers to our own servers. The App
+        has no user accounts and no backend database.
+      </p>
+    </section>
+
+    <!-- 3. How We Use Your Information -->
+    <section>
+      <p class="section-number">03</p>
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li><span>To display your current location as an optional starting stop.</span></li>
+        <li><span>To geocode addresses you enter into map coordinates.</span></li>
+        <li><span>To calculate and display an optimised multi-stop route.</span></li>
+        <li><span>To open your chosen stop address in your device's default maps application.</span></li>
+      </ul>
+      <p>
+        Location and address data is used exclusively within a single session to
+        provide routing functionality. No data is used for advertising, analytics,
+        or profiling.
+      </p>
+    </section>
+
+    <!-- 4. Data Storage -->
+    <section>
+      <p class="section-number">04</p>
+      <h2>Data Storage</h2>
+      <p>
+        All App data (stop lists, preferences) is stored locally on your device using
+        your browser's <strong>localStorage</strong>. This data never leaves your
+        device unless you explicitly share it. You can clear this data at any time
+        by clearing the App's storage in your device settings, or by uninstalling
+        the App.
+      </p>
+      <p>
+        We do not operate any servers that store user data.
+      </p>
+    </section>
+
+    <!-- 5. Third-Party Services -->
+    <section>
+      <p class="section-number">05</p>
+      <h2>Third-Party Services</h2>
+      <p>
+        The App communicates with the following third-party services to function.
+        Each service has its own privacy policy:
+      </p>
+      <div class="third-party">
+
+        <div class="tp-card">
+          <p class="tp-name">OpenStreetMap — Nominatim</p>
+          <p>Geocoding service. Address strings you type are sent to Nominatim to
+          retrieve GPS coordinates. OpenStreetMap's servers are located in the EU.</p>
+          <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">
+            osmfoundation.org/wiki/Privacy_Policy ↗
+          </a>
+        </div>
+
+        <div class="tp-card">
+          <p class="tp-name">Project OSRM</p>
+          <p>Open-source routing engine. Stop coordinates are sent to OSRM's public
+          demo server to calculate the optimised route order. No addresses or personal
+          details are included in these requests.</p>
+          <a href="https://project-osrm.org" target="_blank" rel="noopener">
+            project-osrm.org ↗
+          </a>
+        </div>
+
+        <div class="tp-card">
+          <p class="tp-name">Google Maps / Device Maps App</p>
+          <p>When you tap a stop to open it in maps, the address or coordinates are
+          passed to your device's default maps application (e.g. Google Maps, Waze).
+          That app's own privacy policy applies at that point.</p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            policies.google.com/privacy ↗
+          </a>
+        </div>
+
+        <div class="tp-card">
+          <p class="tp-name">Google Fonts &amp; Leaflet (CDN)</p>
+          <p>Fonts and map tile assets may be loaded from Google Fonts and
+          unpkg.com CDN. Standard CDN access logs (IP address, timestamp) may be
+          retained by those services per their own policies. No personal App data
+          is shared with them.</p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Google Fonts Privacy ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Permissions -->
+    <section>
+      <p class="section-number">06</p>
+      <h2>App Permissions</h2>
+      <ul>
+        <li>
+          <span><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> —
+          requested at runtime only when you use the "Use My Location" feature.
+          You can deny this permission; the App will still work with manually
+          entered addresses.</span>
+        </li>
+        <li>
+          <span><strong>INTERNET</strong> — required to reach the geocoding and
+          routing APIs described above and to load map tiles.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Children -->
+    <section>
+      <p class="section-number">07</p>
+      <h2>Children's Privacy</h2>
+      <p>
+        The App is not directed at children under the age of 13. We do not knowingly
+        collect any personal information from children. If you believe a child has
+        provided personal information through the App, please contact us using the
+        details below and we will take appropriate action.
+      </p>
+    </section>
+
+    <!-- 8. Your Rights -->
+    <section>
+      <p class="section-number">08</p>
+      <h2>Your Rights</h2>
+      <p>
+        Because the App stores no personal data on our servers, there is no data
+        held by us to access, correct, or delete. All locally stored data can be
+        removed by clearing the App's storage in your Android device settings
+        (<em>Settings → Apps → Route Planner → Storage → Clear Data</em>) or by
+        uninstalling the App.
+      </p>
+      <p>
+        If you have questions about data held by any third-party service listed
+        above, please refer to that service's own privacy policy and data request
+        procedures.
+      </p>
+    </section>
+
+    <!-- 9. Changes -->
+    <section>
+      <p class="section-number">09</p>
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be
+        reflected on this page with a revised effective date. Continued use of the
+        App after changes are posted constitutes your acceptance of the updated
+        policy.
+      </p>
+      <p>
+        We recommend checking this page periodically if you have concerns about
+        your privacy.
+      </p>
+    </section>
+
+    <!-- 10. Contact -->
+    <section>
+      <p class="section-number">10</p>
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or concerns about this Privacy Policy or the
+        App's data practices, please reach out:
+      </p>
+      <div class="contact-block">
+        <!-- Replace the placeholder email below with your actual contact address -->
+        <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <span>Route Planner</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
